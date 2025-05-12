@@ -1,0 +1,5 @@
+# latexmk Aux Dir
+.auxg/
+
+# latexmk Out Dir
+.outg/

@@ -1,0 +1,1 @@
+latexmk -xelatex -shell-escape -auxdir="./.auxg" -outdir="./.outg" ./resume.tex
