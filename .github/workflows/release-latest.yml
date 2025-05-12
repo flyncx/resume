@@ -10,7 +10,7 @@ on:
 jobs:
 
   build: 
-    uses: ./.github/workflows/CI.yml
+    uses: ./.github/workflows/ci.yml
 
   # This workflow contains a single job called "release"
   release:
