@@ -1,20 +1,20 @@
 name: Release-Latest
 
 # Controls when the workflow will run
-on:
-  # Triggers this workflow when CI workflow is completed
-  workflow_run:
-    workflows: ["CI"]
-    types:
-      - completed
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on:
+  push:
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+  build: 
+    uses: ./.github/workflows/CI.yml
+
   # This workflow contains a single job called "release"
   release:
+    needs: build
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
